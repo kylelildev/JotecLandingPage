@@ -1,0 +1,92 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 5 (Jewel & Luxury)",
+  "colors": {
+    "background": "#000000",
+    "surface": "#0a0a0a",
+    "surface_glass": "rgba(10, 10, 10, 0.6)",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A1A1AA",
+    "border": "rgba(255, 255, 255, 0.1)",
+    "brand_gradient": {
+      "stops": [
+        "#004CB6",
+        "#07A6E6",
+        "#9ED9A4",
+        "#FFC108",
+        "#D92822"
+      ],
+      "css_value": "linear-gradient(90deg, #004CB6 0%, #07A6E6 30%, #9ED9A4 51%, #FFC108 75%, #D92822 100%)",
+      "text_class": "bg-clip-text text-transparent bg-gradient-to-r from-[#004CB6] via-[#9ED9A4] to-[#D92822]"
+    }
+  },
+  "typography": {
+    "heading_font": "Cabinet Grotesk, sans-serif",
+    "body_font": "Manrope, sans-serif",
+    "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-black",
+    "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+    "h3": "text-xl sm:text-2xl tracking-tight font-bold",
+    "body": "text-base leading-relaxed text-zinc-400",
+    "overline": "text-xs tracking-[0.2em] uppercase font-bold text-zinc-500"
+  },
+  "layout_and_spacing": {
+    "section_padding": "py-24 md:py-32",
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-12 gap-6",
+    "horizontal_scroll_container": "flex w-[500vw] h-screen"
+  },
+  "surfaces": {
+    "glass_header": "backdrop-blur-xl bg-black/60 border-b border-white/10",
+    "card_flat": "bg-[#0a0a0a] border border-white/10 rounded-2xl p-8 hover:-translate-y-1 hover:border-white/20 transition-all duration-300",
+    "gradient_ring_card": "relative p-[1px] rounded-2xl bg-gradient-to-br from-[#004CB6] via-[#FFC108] to-[#D92822] overflow-hidden"
+  },
+  "motion_and_interactions": {
+    "scroll_library": "framer-motion (useScroll, useTransform for horizontal storytelling)",
+    "hero_animation": "Slow pulsing gradient orbs in background, upward stagger fade-in for typography",
+    "horizontal_scroll": "Pin the section, translate X based on scroll Y to create a cinematic gallery of the 5 products",
+    "button_hover": "Scale 1.05, subtle glow matching brand gradient, text remains high contrast",
+    "smooth_scroll": "lenis for momentum scrolling (Critical for Awsmd feel)"
+  },
+  "components": {
+    "navigation": "Sticky, glassmorphism header. JOTEC logo left, links center, Contact CTA right.",
+    "hero": "Full viewport height. Massive 'Cabinet Grotesk' typography. Animated mesh gradient in JOTEC colors interacting with the dark background.",
+    "product_story_scroll": "A sticky horizontal scrolling section. 5 distinct cinematic slides for Speed Editor, Replay Editor, Editor Keyboard, Micro Color Panel, Mini Panel.",
+    "comparison_grid": "Bento-style CSS grid, showing specs (Bluetooth, tactile keys, machined metal, etc.) with dark, minimalist cards and subtle 1px inner borders.",
+    "contact_form": "Shadcn UI form wrapped in a dark cinematic section. Use Input, Textarea with bg-transparent border-white/10 focus:border-[#07A6E6]."
+  },
+  "media": {
+    "logos": [
+      {
+        "url": "https://customer-assets.emergentagent.com/job_549c5935-5d3d-47c2-8849-ba41a8723fc6/artifacts/8qu4hvt9_Logo%20JOTEC.png",
+        "description": "JOTEC Main Brand Logo",
+        "category": "header, footer, hero"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1695460355096-3d303912874b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxkYXZpbmNpJTIwcmVzb2x2ZSUyMHNwZWVkJTIwZWRpdG9yfGVufDB8fHx8MTc3NjUyMTE3Nnww&ixlib=rb-4.1.0&q=85",
+        "description": "DaVinci Resolve Speed Editor / Mini Panel",
+        "category": "product_showcase"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1696389500422-d48223c77d5f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwyfHxkYXZpbmNpJTIwcmVzb2x2ZSUyMG1pY3JvJTIwY29sb3IlMjBwYW5lbHxlbnwwfHx8fDE3NzY1MjExNzZ8MA&ixlib=rb-4.1.0&q=85",
+        "description": "DaVinci Resolve Micro Color Panel",
+        "category": "product_showcase"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1652810251800-51d8d6384b9d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwxfHxkYXZpbmNpJTIwcmVzb2x2ZSUyMGVkaXRvciUyMGtleWJvYXJkfGVufDB8fHx8MTc3NjUyMTE4N3ww&ixlib=rb-4.1.0&q=85",
+        "description": "DaVinci Resolve Editor Keyboard",
+        "category": "product_showcase"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "INSTALL REQUIRED FONTS: Import Cabinet Grotesk (from Fontshare or local) and Manrope (Google Fonts).",
+    "INSTALL LIBRARIES: yarn add framer-motion @studio-freight/lenis @phosphor-icons/react lucide-react",
+    "STORYTELLING SCROLL: Implement a sticky horizontal scroll section for the 5 products using Framer Motion (useScroll, useTransform). As the user scrolls down, the viewport is pinned and content slides horizontally.",
+    "GRADIENT USAGE: Use the JOTEC gradient carefully. Do not paint entire backgrounds. Use it for text clips, 1px glowing borders around active products, or blurred background orbs (mesh gradient) behind the hero.",
+    "CONTACT FORM: Build a working backend integration (MongoDB) for the form. Design should be flat, border-bottom only inputs, or highly styled dark mode Shadcn inputs with focus states mapped to #07A6E6.",
+    "Do NOT use placeholder text for logos. ALWAYS use the provided JOTEC logo URL.",
+    "Apply `data-testid` to all interactive elements."
+  ]
+}
